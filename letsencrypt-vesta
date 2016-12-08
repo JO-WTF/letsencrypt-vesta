@@ -255,7 +255,7 @@ do
 
         #Check if the site already has a cert
         HAS_CERT=`$VESTA_PATH/bin/v-list-web-domain-ssl $USER $DOMAIN`
- +      if [[ $HAS_CERT == '' ]]
+        if [[ $HAS_CERT == '' ]]
         then
             #Configure SSL and install the cert
             $VESTA_PATH/bin/v-add-web-domain-ssl $USER $DOMAIN $TMPLOC
